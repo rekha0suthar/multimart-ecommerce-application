@@ -3,12 +3,14 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Col, Container, Row } from "reactstrap";
 import "../styles/shop.css";
-import products from "../assets/data/products";
 import ProductList from "../components/UI/ProductList";
+import useGetData from "../custom-hooks/useGetData"
 
 const categories = ["Sofa", "Mobile", "Chair", "Watch", "Wireless"];
 
 const Shop = () => {
+  const {data: products, loading} = useGetData('products')
+
   const [productsData, setProductsData] = useState(products);
 
   const handleFilter = (e) => {
@@ -70,7 +72,7 @@ const Shop = () => {
             {productsData.length === 0 ? (
               <h1 className="text-center">No products are found!</h1>
             ) : (
-              <ProductList data={productsData} />
+              loading ? <h4 className="text-center">Loading.....</h4>  : <ProductList data={productsData} />
             )}
           </Row>
         </Container>
