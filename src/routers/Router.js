@@ -11,6 +11,7 @@ import AllProduct from "../admin/AllProduct";
 import AddProduct from "../admin/AddProduct";
 import Dashboard from "../admin/Dashboard";
 import Users from "../admin/Users";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const Router = () => {
   return (
@@ -20,6 +21,7 @@ const Router = () => {
       <Route path="/shop" element={<Shop />} />
       <Route path="/shop/:id" element={<ProductDetails />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/*" element={<ProtectedRoute />}>
         <Route path="checkout" element={<Checkout />} />
         <Route path="dashboard" element={<Dashboard />} />

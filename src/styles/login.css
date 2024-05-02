@@ -21,3 +21,7 @@
 .auth_form input[type='file'] {
     color: #fff;
 }
+
+.auth_form p a:hover {
+    color: coral;
+}

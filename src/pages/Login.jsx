@@ -64,6 +64,9 @@ const Login = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </FormGroup>
+                  <p>
+                    <Link to="/forgot-password">Forgot Password</Link>
+                  </p>
                   <button type="submit" className="buy_btn auth_btn">
                     Login
                   </button>
