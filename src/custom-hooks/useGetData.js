@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import  {db} from '../firebase.config'
 import { collection, onSnapshot } from "firebase/firestore";
 
@@ -17,7 +17,7 @@ const useGetData = (collectionName) => {
             
         }
         getData()
-    }, [])
+    }, [collectionRef])
   return { data, loading }
 }
 
