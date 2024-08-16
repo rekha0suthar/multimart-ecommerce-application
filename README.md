@@ -1,4 +1,4 @@
-# multicart-ecommerce-application
+# multimart-ecommerce-application
 
 
 ### Main Section
